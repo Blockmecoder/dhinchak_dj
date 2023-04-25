@@ -3,12 +3,13 @@
   function dicl() {
     var element = this.innerHTML;
      makesound(element);
+    animated(element);
   }
 
 }
 document.addEventListener("keydown",function(event){
  makesound(event.key);
-
+animated(event.key);
 })
 
 function makesound(key){
@@ -39,4 +40,9 @@ default : console.log(key);
   }
 
 
+}
+function animated(press){
+var pressing = document.querySelector("."+press); 
+pressing.classList.add("pressed");
+setTimeout( function(){pressing.classList.remove("pressed")}, 250);
 }
