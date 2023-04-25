@@ -10,9 +10,9 @@ document.addEventListener("keydown",function(event){
     makesound(event.key);
 }
   );
-function makesound(new)
+function makesound(chick)
 {
-    switch (new)
+    switch (chick)
        {
           case "w":
             new Audio("tom-1.mp3").play();
@@ -35,7 +35,7 @@ function makesound(new)
           case "l":
             new Audio("crash.mp3").play();
           break;
-          default : console.log(new);
+          default : console.log(chick);
        }
 }
  
